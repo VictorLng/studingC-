@@ -4,6 +4,7 @@
         "*.go": "go",
         "xstring": "cpp",
         "system_error": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "iostream": "cpp"
     }
 }

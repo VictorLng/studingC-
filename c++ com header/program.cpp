@@ -2,6 +2,6 @@
 
 using namespace std;
 
-int main(){
+main(){
     cout << "teste header";
 }
