@@ -17,7 +17,8 @@ int contar() {
     double time_taken = double(end - start) / double(CLOCKS_PER_SEC);
     cout << "o tempo de execucao do programa foi de : " << fixed 
          << time_taken << setprecision(5);
-    cout << " seg " << endl;
+    cout << " seg " << endl; //haru
+
     getch();
 }
 
