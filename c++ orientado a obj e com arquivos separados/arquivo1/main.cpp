@@ -3,13 +3,47 @@
 
 using namespace std;
 
-int main(){
-     int num;
-    cout << "me de um valor para imprimir" << endl;
+int contar() {
+    clock_t start, end;
+    start = clock();
+    int num;
+    cout << "Me de um valor para imprimir: ";
     cin >> num;
-   
+
     contador(num);
-   
-    cout << "precione algo para fechar o pograma meu fio";
+
+    cout << "Pressione algo para fechar o programa meu fio";
+    end = clock();
+    double time_taken = double(end - start) / double(CLOCKS_PER_SEC);
+    cout << "o tempo de execucao do programa foi de : " << fixed 
+         << time_taken << setprecision(5);
+    cout << " seg " << endl;
     getch();
+}
+
+int main() {
+    int seletor;
+
+    do {
+        cout << "Escolha a sua funcao do programa \n"
+             << "1: Contador\n"
+             << "0: Sair\n";
+        cin >> seletor;
+
+        switch (seletor) {
+            case 1:
+                contar();
+                break;
+
+            case 0:
+                cout << "Saindo do programa. Ate mais!\n";
+                break;
+
+            default:
+                cout << "Opção invalida. Tente novamente.\n";
+                break;
+        }
+    } while (seletor != 0);
+
+    return 0;
 }
