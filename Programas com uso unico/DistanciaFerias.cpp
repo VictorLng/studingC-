@@ -10,7 +10,9 @@ using namespace std;
    int fDia;
    int fMes;
 
-   ferias(int dia, int mes) : fDia(dia), fMes(mes) {}
+   ferias(int dia, int mes){ 
+    fDia = dia, fMes = mes;
+    }
 };
 string getMes(int mes){
 

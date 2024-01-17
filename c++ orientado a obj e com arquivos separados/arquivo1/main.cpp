@@ -4,8 +4,7 @@
 using namespace std;
 
 int contar() {
-    clock_t start, end;
-    start = clock();
+    clock_t start{clock()};
     int num;
     cout << "Me de um valor para imprimir: ";
     cin >> num;
@@ -13,11 +12,11 @@ int contar() {
     contador(num);
 
     cout << "Pressione algo para fechar o programa meu fio";
-    end = clock();
-    double time_taken = double(end - start) / double(CLOCKS_PER_SEC);
+    clock_t end{clock()};
+    double time_taken{double(end - start) / double(CLOCKS_PER_SEC)};
     cout << "o tempo de execucao do programa foi de : " << fixed 
          << time_taken << setprecision(5);
-    cout << " seg " << endl; //haru
+    cout << " seg " << '\n'; //haru
 
     getch();
 }
